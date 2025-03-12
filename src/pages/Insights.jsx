@@ -79,10 +79,10 @@ export default function InsightsUpload() {
   
       toast.success("Dashboard Created!", {
         description: "Your files have been processed successfully.",
-        action: {
-          label: "View Dashboard",
-          onClick: () => window.location.href = "/dashboard"
-        }
+        // action: {
+        //   label: "View Dashboard",
+        //   onClick: () => window.location.href = "/dashboard"
+        // }
       });
     } catch (error) {
       toast.error("Error Processing Files", {
