@@ -2,19 +2,41 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ChevronRight, BarChart3, PieChart, LineChart, TrendingUp } from "lucide-react"
+import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 export default function HomePage() {
-    const navigate=useNavigate()
 
-    function getback() {
-        navigate("/dashboard");
-      }
-    
+  const navigate = useNavigate();
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIframeLoaded(true);
+    }, 1000); // Delay the iframe loading by 1 second
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  function getback() {
+    navigate("/dashboard");
+  }
+
 
   return (
     <div className="min-h-screen bg-background">
-
+      {iframeLoaded && (
+        <iframe
+          src="https://lookerstudio.google.com/embed/reporting/5841aa92-4199-44fc-884f-2021b478a8f1/page/y2VAF"
+          width="100%"
+          height="600"
+          frameBorder="0"
+          allowFullScreen
+          className="rounded-lg shadow-lg"
+          sandbox="allow-scripts allow-same-origin"
+        />
+      )}
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
