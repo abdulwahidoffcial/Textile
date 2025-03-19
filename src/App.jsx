@@ -1,4 +1,4 @@
-import DashboardsPage from './pages/Dashboard'
+import DashboardsPage from './pages/Chart'
 import HomePage from './pages/Home'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NavBar from './pages/Nav'
@@ -30,7 +30,7 @@ function App() {
           <NavBar userInfo={userInfo} setUserInfo={setUserInfo} isLogged={isLogged} setIsLogged={setIsLogged}/>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/dashboard" element={<DashboardsPage/>}/>
+            <Route path="/Chart" element={<ChartsPage/>}/>
             <Route path="/insights" element={<InsightsUpload/>}/>
           </Routes>
         </BrowserRouter>

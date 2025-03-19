@@ -33,11 +33,14 @@ export default function NavBar({ userInfo, setUserInfo, isLogged, setIsLogged })
               Textile DataViz
             </h1>
             <div className="hidden md:flex space-x-6">
-              <NavLink className="hover:text-green-500 hover:underline" to="/dashboard">
-                Dashboards
+              <NavLink className="hover:text-green-500 hover:underline" to="/Chart">
+                Charts
               </NavLink>
               <NavLink className="hover:text-green-500 hover:underline" to="/insights">
                 Insights
+              </NavLink>
+              <NavLink className="hover:text-green-500 hover:underline" to="/dashboard">
+                Dashbords
               </NavLink>
             </div>
           </div>
