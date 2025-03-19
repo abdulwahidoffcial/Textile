@@ -1,11 +1,11 @@
-import DashboardsPage from './pages/Chart'
+import ChartsPage from './pages/Chart'
 import HomePage from './pages/Home'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NavBar from './pages/Nav'
 import InsightsUpload from './pages/Insights'
 import { useEffect, useState } from 'react'
-// import Profile from './pages/Profile'
 import axios from 'axios'
+import DashboardsPage from './pages/Dashboard'
 
 function App() {
   const [userInfo, setUserInfo] = useState(null);
@@ -32,6 +32,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/Chart" element={<ChartsPage/>}/>
             <Route path="/insights" element={<InsightsUpload/>}/>
+            <Route path="/dashboard" element={<DashboardsPage/>}/>
           </Routes>
         </BrowserRouter>
       </div>

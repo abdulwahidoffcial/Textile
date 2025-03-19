@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ChevronRight, BarChart3, PieChart, LineChart, TrendingUp } from "lucide-react"
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import image1 from "@/assets/image1.jpg"
 
 export default function HomePage() {
 
@@ -24,9 +25,10 @@ export default function HomePage() {
   }
 
 
-
+  return (
+    < div className="min-h-screen bg-background" >
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12">
+      < section className="container mx-auto px-4 py-12" >
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-4">Transform Your Data Into Insights</h2>
@@ -39,13 +41,13 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="relative aspect-video rounded-lg overflow-hidden">
-            <img src="/placeholder.svg?height=400&width=600" alt="Dashboard Overview" className="object-cover" />
+            <img src={image1} alt="Dashboard Overview" className="object-cover" />
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Featured Visualizations */}
-      <section className="container mx-auto px-4 py-12">
+      < section className="container mx-auto px-4 py-12" >
         <Tabs defaultValue="trending" className="mb-8">
           <TabsList>
             <TabsTrigger value="trending">Trending</TabsTrigger>
@@ -84,10 +86,10 @@ export default function HomePage() {
             </div>
           </TabsContent>
         </Tabs>
-      </section>
+      </section >
 
       {/* Featured Dashboard */}
-      <section className="container mx-auto px-4 py-12 border-t">
+      < section className="container mx-auto px-4 py-12 border-t" >
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Featured Dashboard</h2>
           <p className="text-muted-foreground">Explore our most comprehensive business intelligence dashboard</p>
@@ -107,8 +109,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   )
 }
 
