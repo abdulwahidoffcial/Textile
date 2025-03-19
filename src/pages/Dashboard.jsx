@@ -1,21 +1,21 @@
+import React, { useState } from "react";
+import image from "@/assets/image1.jpg"
 
 
+export default function DashboardsPage() {
+  // const [iframeLoaded, setIframeLoaded] = useState(false);
 
-export default function DashboardsPage(){
-    const [iframeLoaded, setIframeLoaded] = useState(false);
-    return (
-        <div className= "w-full h-[80vh]">
-          {iframeLoaded && (
-            <iframe
-              src="https://lookerstudio.google.com/embed/reporting/5841aa92-4199-44fc-884f-2021b478a8f1/page/y2VAF"
-              width="100%"
-              height="600"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg shadow-lg"
-              sandbox="allow-scripts allow-same-origin"
-            />
-          )}
-        </div>
-      )
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIframeLoaded(true);
+  //   }, 1000); // Delay the iframe loading by 1 second
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  return (
+    <div className="w-full h-[80vh]">
+      <img src={image} alt="Dashboard" className="w-full h-full object-cover" />
+    </div>
+  )
 }
